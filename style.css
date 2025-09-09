@@ -1,0 +1,127 @@
+:root {
+  --bg1: #0f172a;
+  --bg2: #0b1020;
+  --card: rgba(255, 255, 255, 0.06);
+  --accent: #7c3aed;
+  --accent-2: #06b6d4;
+  --muted: rgba(255, 255, 255, 0.65);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+html, body { height: 100%; margin: 0; }
+body {
+  background: linear-gradient(180deg,var(--bg1),var(--bg2));
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.container {
+  max-width: 980px;
+  width: 100%;
+  background: rgba(255,255,255,0.02);
+  border-radius: 18px;
+  padding: 28px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.logo {
+  width: 64px; height: 64px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg,var(--accent),var(--accent-2));
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+}
+
+.game {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.players {
+  display: flex;
+  gap: 12px;
+}
+
+.player {
+  flex: 1;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+.score {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.choice-grid {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.choice-btn {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+.choice-btn:hover { transform: translateY(-5px); }
+
+.panel {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.result-box {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.big-result {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  margin: 0 5px;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn.primary {
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  border: none;
+  color: #fff;
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rock • Paper • Scissors — 2 Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">RPS</div>
+      <div>
+        <h1>Rock • Paper • Scissors — 2 Player</h1>
+        <p class="lead">Play locally: each player picks a choice. First to 5 wins (configurable).</p>
+      </div>
+    </header>
+
+    <div class="board">
+      <section class="game">
+        <div class="players">
+          <div class="player" id="player1">
+            <h2>Player 1</h2>
+            <div class="score" id="score1">0</div>
+            <div class="choice-grid">
+              <button class="choice-btn" data-player="1" data-choice="rock">🪨<small>Rock</small></button>
+              <button class="choice-btn" data-player="1" data-choice="paper">📄<small>Paper</small></button>
+              <button class="choice-btn" data-player="1" data-choice="scissors">✂️<small>Scissors</small></button>
+            </div>
+            <div class="status" id="status1">Waiting...</div>
+          </div>
+
+          <div class="player" id="player2">
+            <h2>Player 2</h2>
+            <div class="score" id="score2">0</div>
+            <div class="choice-grid">
+              <button class="choice-btn" data-player="2" data-choice="rock">🪨<small>Rock</small></button>
+              <button class="choice-btn" data-player="2" data-choice="paper">📄<small>Paper</small></button>
+              <button class="choice-btn" data-player="2" data-choice="scissors">✂️<small>Scissors</small></button>
+            </div>
+            <div class="status" id="status2">Waiting...</div>
+          </div>
+        </div>
+
+        <footer>Tip: Players can pick simultaneously. After both choose, the winner is shown below.</footer>
+      </section>
+
+      <aside class="panel">
+        <div class="result-box">
+          <div class="big-result" id="roundResult">— Make your choices —</div>
+          <div class="choices-show">
+            <div class="pill">P1: <span id="show1">—</span></div>
+            <div class="pill">P2: <span id="show2">—</span></div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div>
+            <button class="btn" id="nextRound">Next Round</button>
+            <button class="btn" id="autoReveal">Auto Reveal</button>
+          </div>
+          <div>
+            <label>Target:</label>
+            <select id="targetScore">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="5" selected>5</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn" id="resetBtn">Reset Scores</button>
+          <button class="btn primary" id="resetAll">New Game</button>
+        </div>
+
+        <div>Round history: <span id="history">0</span> rounds</div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
